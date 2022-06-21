@@ -37,8 +37,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Custom
     @Override
     public void onBindViewHolder(@NonNull CustomCategoryViewHolder holder, int position) {
         holder.rvSubcategoryList.setAdapter(new SubCategoryAdapter(mContext, mCategories.get(position).subCategories));
-//        holder.rvSubcategoryList.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false));
-//        holder.tvCategoryName.setText(mCategories.get(position).categoryName);
+        holder.rvSubcategoryList.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false));
+        holder.tvCategoryName.setText(mCategories.get(position).categoryName);
     }
 
     @Override
@@ -54,7 +54,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Custom
             super(itemView);
 
             tvCategoryName = itemView.findViewById(R.id.tvMainCategoryName);
-            rvSubcategoryList = itemView.findViewById(R.id.rvCategories);
+            rvSubcategoryList = itemView.findViewById(R.id.rvSubCategories);
         }
     }
 }

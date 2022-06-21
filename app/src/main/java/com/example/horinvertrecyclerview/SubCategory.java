@@ -5,5 +5,4 @@ public class SubCategory {
     public String subCategoryName;
     public String subCategoryImgUrl;
 
-
 }

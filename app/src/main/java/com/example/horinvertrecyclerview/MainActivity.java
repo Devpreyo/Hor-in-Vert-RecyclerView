@@ -51,7 +51,27 @@ public class MainActivity extends AppCompatActivity {
         topBrands.subCategories.add(subCategory);
         topBrands.subCategories.add(subCategory2);
 
+        Category superSale = new Category();
+        superSale.id = 2;
+        superSale.categoryName = "SuperSale";
+        superSale.subCategories = new ArrayList<SubCategory>();
+
+        SubCategory subCategory11 = new SubCategory();
+        subCategory11.id = 1;
+        subCategory11.subCategoryName = "Roy";
+        subCategory11.subCategoryImgUrl = "https://d3ulwu8fab47va.cloudfront.net/skin/frontend/default/ubuycom-v1/images/home-category-icons/electronics.png";
+
+        SubCategory subCategory12 = new SubCategory();
+        subCategory12.id = 2;
+        subCategory12.subCategoryName = "PY";
+        subCategory12.subCategoryImgUrl = "https://d3ulwu8fab47va.cloudfront.net/skin/frontend/default/ubuycom-v1/images/home-category-icons/electronics.png";
+
+
+        superSale.subCategories.add(subCategory11);
+        superSale.subCategories.add(subCategory12);
+
         categories.add(topBrands);
+        categories.add(superSale);
 
         return categories;
     }
