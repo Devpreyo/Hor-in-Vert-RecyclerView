@@ -3,6 +3,7 @@ package com.example.horinvertrecyclerview;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -31,6 +32,7 @@ public class ParentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                 viewHolder = new WelcomeTextHolder(view);
                 break;
             default:
+                Toast.makeText(parent.getContext(), "Error in welcomed", Toast.LENGTH_SHORT).show();
                 throw new IllegalStateException("Unexpected value: " + viewType);
         }
 

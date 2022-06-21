@@ -17,9 +17,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Custom
     ArrayList<Category> mCategories;
     Context mContext;
     LayoutInflater mInflater;
+    Category category = new Category();
 
     public CategoryAdapter(ArrayList<Category> categories, Context context) {
         mCategories = categories;
+//        mCategories = category.prepareData();
         mContext = context;
         mInflater = LayoutInflater.from(context);
     }
